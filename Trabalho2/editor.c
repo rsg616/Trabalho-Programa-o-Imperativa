@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Aqui está a função para ler um inteiro validado de um arquivo
+// Aqui está a função para ler um valor inteiro validado do arquivo 
 int lerInteiroValidado(FILE *arquivo);
 
 // Função para liberar memória alocada para a lista encadeada
@@ -20,7 +20,7 @@ void liberarMemoriaLista(Elemento *lista)
     }
 }
 
-// Função para inserir um novo elemento na lista (VERIFICAR SE ISSO TA DUPLICANDO )
+// Função para inserir um novo elemento na lista(pessoas e suas respectivas informações)
 void inserirElemento(Elemento **lista, Pessoa pessoas[], int *quantidade)
 {
     int chave;
@@ -96,7 +96,7 @@ void removerElemento(Elemento **lista, int chave)
             elementoAnterior->proximo = elementoAtual->proximo; // Remove o elemento ajustando os ponteiros
         }
 
-        free(elementoAtual); // Libera a memória do elemento removido da lista
+        free(elementoAtual); // Libera a memória do elemento removido da lista(memoria heap)
         printf("Pessoa com numero de cadastro %d removido\n", chave);
     }
     else
